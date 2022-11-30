@@ -1,7 +1,4 @@
 import chess
-from Negamax import NegamaxAgent
-from Negascout import NegascoutAgent
-from PVS import PVSAgent
 
 
 class GameEngine:
@@ -15,15 +12,15 @@ class GameEngine:
         self.board.push_san(play)
 
     def playAIMove(self, maxDepth, color, method):
-        if(method=='negamax'):
-            negamax = NegamaxAgent(self.board, color, maxDepth)
-            bestMove = negamax.getMove()
-        elif(method=='negascout'):
-            negascout = NegascoutAgent(self.board, color, maxDepth)
-            bestMove = negascout.getMoveAB()
-        else:
-            pvs = PVSAgent(self.board, color, maxDepth)
-            bestMove = pvs.getMoveAB()
+        # if(method=='negamax'):
+        #     negamax = NegamaxAgent(self.board, color, maxDepth)
+        #     bestMove = negamax.getMove()
+        # elif(method=='negascout'):
+        #     negascout = NegascoutAgent(self.board, color, maxDepth)
+        #     bestMove = negascout.getMoveAB()
+        # else:
+        #     pvs = PVSAgent(self.board, color, maxDepth)
+        #     bestMove = pvs.getMoveAB()
             
             
         print('BEST MOVE', bestMove)
